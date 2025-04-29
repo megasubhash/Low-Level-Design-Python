@@ -1,0 +1,2 @@
+DP based: given a start point and endpoint on number line (1,2,3...10) and list of hurdles [1, 4], you can jump forward and backward two steps [2 to 4, or 2 to 1] and you cannot jump if there is hurdle, count number of from points you from where can reach to destination. You can't go beyond start and end points on the number line.
+
