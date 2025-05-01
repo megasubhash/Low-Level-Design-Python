@@ -1,2 +1,54 @@
 DP based: given a start point and endpoint on number line (1,2,3...10) and list of hurdles [1, 4], you can jump forward and backward two steps [2 to 4, or 2 to 1] and you cannot jump if there is hurdle, count number of from points you from where can reach to destination. You can't go beyond start and end points on the number line.
 
+
+
+https://leetcode.com/problems/rank-teams-by-votes/description/
+https://leetcode.com/problems/word-search/description/
+https://leetcode.com/problems/all-oone-data-structure/description/
+
+
+ghttps://leetcode.com/problems/stock-price-fluctuation/description/
+https://leetcode.com/problems/find-k-closest-elements/description/
+https://leetcode.com/problems/design-file-system/description/
+
+Another variation of above problem.
+Given a list of sentences (string having words separated by space), and an integer exactLen.
+You have to generate line of exactLen (Similar to above question), by rearranging the words in above sentences but keep order maintained. If lineLength is less than exactLen, fill it with '-' which should be distributed equally from left to right.
+Last line does not need to have additional '-'
+e.g.
+I/P : [ "The day began as still as the", "night abruptly lighted with", "brilliant flame" ], exactLen=24
+
+O/P :
+[
+"The--day--began-as-still",
+"as--the--night--abruptly",
+"lighted--with--brilliant",
+"flame" ] // <--- a single word on a line is not padded with spaces
+
+
+System Design
+Any concerns with Consistent Hashing for multiple servers serving music uploading/streaming service
+How would you handle large files that cannot fit in on a single machine
+How would you scale your backend if your app is going from a single country to international app
+Pros and cons of preloading hints or loading them from server for a game. Hints could be text/image/video based.
+
+
+
+
+Code Design Round
+We want to implement a middleware router for our web service, which based on the path returns different strings (these would represent “functions to invoke” in a real application).
+Usage:
+Router.addRoute("/bar", "result")
+Router.callRoute("/bar") -> "result"
+
+follow up - search using wildcard
+
+Router router = Router()
+router.addRoute("/foo", "foo")
+router.addRoute("/bar/*/baz", "bar")
+
+router.callRoute("/bar/a/baz") -> bar
+
+if input is this -
+router.addRoute("/foo/baz", "foo")
+router.addRoute("/foo/*", "bar")
