@@ -1,4 +1,4 @@
-
+```mermaid
 classDiagram
     ParkingLot "1" *-- "many" ParkingFloor
     ParkingFloor "1" *-- "many" ParkingSpot
@@ -86,3 +86,4 @@ classDiagram
         +calculate_bill()
         +get_status()
     }
+```
