@@ -1,0 +1,64 @@
+{
+  "root": {
+    "level": "WARNING",
+    "handlers": [
+      {
+        "type": "console",
+        "level": "WARNING",
+        "formatter": "simple"
+      }
+    ]
+  },
+  "loggers": {
+    "app": {
+      "level": "INFO",
+      "propagate": false,
+      "handlers": [
+        {
+          "type": "console",
+          "level": "INFO",
+          "formatter": "detailed"
+        },
+        {
+          "type": "file",
+          "level": "DEBUG",
+          "filename": "logs/app.log",
+          "formatter": "detailed"
+        },
+        {
+          "type": "rotating_file",
+          "level": "ERROR",
+          "filename": "logs/errors.log",
+          "formatter": "detailed",
+          "max_bytes": 5242880,
+          "backup_count": 10
+        }
+      ]
+    },
+    "app.api": {
+      "level": "DEBUG",
+      "propagate": true,
+      "handlers": [
+        {
+          "type": "file",
+          "level": "DEBUG",
+          "filename": "logs/api.log",
+          "formatter": "json"
+        }
+      ]
+    },
+    "app.db": {
+      "level": "INFO",
+      "propagate": true,
+      "handlers": [
+        {
+          "type": "file",
+          "level": "INFO",
+          "filename": "logs/db.log",
+          "formatter": "custom",
+          "format": "{formatted_timestamp} [{level_name}] {logger_name}: {message}"
+        }
+      ]
+    }
+  }
+}
